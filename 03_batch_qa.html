@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CNXRAY</title>
+        <link rel="stylesheet" type="text/css" href="css/layout.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="css/datatables.css.css">
+        
+        
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/datatables.js"></script>
+    </head>
+    <body>
+        <div class="gnb_wrap">
+            <div class="gnb_wrap_inner">
+                <div class="gnb_content">
+                    <div class="gnb_content_logo">
+                        <img src="./images/new_logo.png">
+                    </div>   
+                    <ul class="gnb_menu_wrap">
+                        <li class="gnb_menu_li ">
+                            <a href="01_one_page_qa.html">One Page QA Mode</a>
+                        </li>
+                        <li class="gnb_menu_li ">
+                            <a href="02_multi_pages_qa.html">Multi Pages QA Mode</a>
+                        </li>
+                        <li class="gnb_menu_li selected">
+                            <a href="03_batch_qa.html">Batch QA Mode</a>
+                        </li>
+                    </ul>
+                    <div class="gnb_user_stat_wrap">
+                        <div class="down_btn_wrap">
+                            <div class="btn_type_01_wrap">
+                                <button class="btn_type_01"><span>AA SDR</span>
+                                    <div class="btn_update_tooltip">Updated:02-Sep-19</div>
+                                </button>
+                                
+                            </div>
+                            <div class="btn_type_02_wrap">
+                                <button class="btn_type_02"><span>GA SDR</span>
+                                    <div class="btn_update_tooltip">Updated:02-Sep-19</div>
+                                </button>
+                                
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="gnb_user_stat">
+                            <div class="gnb_user_img"></div>
+                            <span class="gnb_user_nm">Admin</span>
+                        </div>
+                    </div>
+                    
+                </div>      
+            </div>
+            <div class="gnb_outter_batch">
+                <div class="page_tit">Batch QA Mode</div>
+                <div class="table_btn_wrap">
+                    <div class="position_left">
+                        <button class="add_req">+ Add Request</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="content_wrap">
+            <!-- <div class="content_top_wrap">
+                <button class="btn exp">Export</button>
+            </div> -->
+            <div class="content_inner">
+                
+                <table class="content_list_table detail_batch">
+                        
+                    <tbody>
+                    <tr class="">
+                        <th>Request Date</th>
+                        <th>User-ID</th>
+                        <th>Title</th>
+                        <th>Status</th>
+                        <th>&nbsp;</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    <tr class="">
+                        <td>2019.12.25 12:00</td>
+                        <td>Admin</td>
+                        <td>Note10 PDP</td>
+                        <td><span class="scheduled">Scheduled</span></td>
+                        <td><button class="btn_view batch">View</button></td>
+                        <td><button class="batch_del">Delete</button></td>
+                    </tr>
+                    <tr class="">
+                        <td>2019.12.25 12:00</td>
+                        <td>Admin</td>
+                        <td>Note10 PDP</td>
+                        <td><span class="in_progress">In Progress</span></td>
+                        <td><button class="btn_view batch">View</button></td>
+                        <td><button class="batch_del">Delete</button></td>
+                    </tr>
+                    <tr class="">
+                        <td>2019.12.25 12:00</td>
+                        <td>Admin</td>
+                        <td>Note10 PDP</td>
+                        <td><span class="failed">Failed</span></td>
+                        <td><button class="btn_view batch">View</button></td>
+                        <td><button class="batch_del">Delete</button></td>
+                    </tr>
+                    <tr class="">
+                        <td>2019.12.25 12:00</td>
+                        <td>Admin</td>
+                        <td>Note10 PDP</td>
+                        <td><span class="completed">Completed</span></td>
+                        <td><button class="btn_view batch">View</button></td>
+                        <td><button class="batch_del">Delete</button></td>
+                    </tr>
+                    <tr class="">
+                        <td>2019.12.25 12:00</td>
+                        <td>Admin</td>
+                        <td>Note10 PDP</td>
+                        <td><span class="scheduled">Scheduled</span></td>
+                        <td><button class="btn_view batch">View</button></td>
+                        <td><button class="batch_del">Delete</button></td>
+                    </tr>
+                    <tr class="">
+                        <td>2019.12.25 12:00</td>
+                        <td>Admin</td>
+                        <td>Note10 PDP</td>
+                        <td><span class="in_progress">In Progress</span></td>
+                        <td><button class="btn_view batch">View</button></td>
+                        <td><button class="batch_del">Delete</button></td>
+                    </tr>
+                    <tr class="">
+                        <td>2019.12.25 12:00</td>
+                        <td>Admin</td>
+                        <td>Note10 PDP</td>
+                        <td><span class="failed">Failed</span></td>
+                        <td><button class="btn_view batch">View</button></td>
+                        <td><button class="batch_del">Delete</button></td>
+                    </tr>
+                    <tr class="">
+                        <td>2019.12.25 12:00</td>
+                        <td>Admin</td>
+                        <td>Note10 PDP</td>
+                        <td><span class="completed">Completed</span></td>
+                        <td><button class="btn_view batch">View</button></td>
+                        <td><button class="batch_del">Delete</button></td>
+                    </tr>
+                    <tr class="">
+                        <td>2019.12.25 12:00</td>
+                        <td>Admin</td>
+                        <td>Note10 PDP</td>
+                        <td><span class="failed">Failed</span></td>
+                        <td><button class="btn_view batch">View</button></td>
+                        <td><button class="batch_del">Delete</button></td>
+                    </tr>
+                    <tr class="">
+                        <td>2019.12.25 12:00</td>
+                        <td>Admin</td>
+                        <td>Note10 PDP</td>
+                        <td><span class="completed">Completed</span></td>
+                        <td><button class="btn_view batch">View</button></td>
+                        <td><button class="batch_del">Delete</button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <div class="pag_wrap">
+                <div class="left">
+                    15<span class="tit">Result</span> 
+                </div>
+                <div class="pagination">
+                    
+                    <a href="#">&lt; &nbsp;&nbsp;Prev</a>
+                    <a href="#">1</a>
+                    <a class="active" href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <a href="#">Next &nbsp;&nbsp;&gt;</a>
+                    
+                </div>
+                <div class="right">
+                    <span class="tit">Items per page</span>
+                    <select id="selectmenu3" style="display: none;">
+                        <option selected="selected">15</option>
+                        <option>test</option>
+                        <option>test</option>
+                        <option>test</option>
+                        <option>test</option>
+                    </select>
+                </div>
+            </div>
+
+            </div>     
+        </div>
+        
+        <!-- add URL popup-->
+        <div class="popbg"></div>
+        <div class="request">
+            <div class="req_wrap">
+                <button class="close_pop_right"></button>
+                <div class="pop_content_tit">Batch QA Request Detail</div>
+            </div>
+            <table class="req_pop_table">
+                <tr>
+                    <th>User-ID</th>
+                    <td><span class="pop_id">asppges</span></td>
+                </tr>
+                <tr>
+                    <th>Tag Type</th>
+                    <td class="radio_td">
+                        <span>
+                            <input type="radio" name="tag_type" checked>Page Tracking Only
+                        </span>
+                        <span>
+                            <input type="radio" name="tag_type">Page + Event Tracking
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Image Capture </th>
+                    <td  class="radio_td">
+                        <span>
+                            <input type="radio" name="img_cap" checked>Yes
+                        </span>
+                        <span>
+                            <input type="radio" name="img_cap">No
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Title</th>
+                    <td>Note10 PDP</td>
+                </tr>
+                <tr>
+                    <th>Recipient</th>
+                    <td class="recipient">Junggon.im@concentrix.com; Junggon.im@concentrix.com; Junggon.im@concentrix.com; Junggon.im@concentrix.com; Junggon.im@concentrix.com; Junggon.im@concentrix.com</td>
+                </tr>
+                <tr>
+                    <th>Request Date</th>
+                    <td>2019.12.25 12:00</td>
+                </tr>
+            </table>
+        </div>
+        <div class="schedule">
+            <div class="req_wrap">
+                <button class="close_pop_right"></button>
+                <div class="pop_content_tit">Batch Schedule Registration</div>
+            </div>
+            <!--  -->
+
+            <div class="wrap_left">
+                <div class="url_sch_wrap dis_iblock" >
+                    <span class="tit2">Template</span>
+                    <div class="url_sch_inner2">
+                        <button class="template_dl_btn">Download</button>
+                    </div>
+                </div>
+
+                <div class="url_sch_wrap dis_iblock">
+                    <span class="tit2">URL Upload</span>
+                    <div class="url_sch_inner2">
+                        <div class="filebox">
+                            <label for="upload">Choose File</label>
+                            <input class="upload-name" value="No file selected." disabled="disabled">
+                            
+                            <input type="file" id="upload" name="upload" class="upload-hidden">
+                            <a onclick="javascript:fileCancel();"><img src="images/close.png" alt="첨부파일 삭제 버튼"></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <table class="req_pop_table">
+                <tr>
+                    <th>User-ID</th>
+                    <td><span class="pop_id">asppges</span></td>
+                </tr>
+                <tr>
+                    <th>Tag Type</th>
+                    <td class="radio_td">
+                        <span>
+                            <input type="radio" name="tag_type" checked>Page
+                        </span>
+                        <span>
+                            <input type="radio" name="tag_type">Event
+                        </span>
+                        <span>
+                            <input type="radio" name="tag_type">Page + Event
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Image Capture </th>
+                    <td  class="radio_td">
+                        <span>
+                            <input type="radio" name="img_cap" checked>Yes
+                        </span>
+                        <span>
+                            <input type="radio" name="img_cap">No
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Title</th>
+                    <td><input type="text" class="schedule_text"></td>
+                </tr>
+                <tr>
+                    <th>Recipient</th>
+                    <td><input type="text" class="schedule_text"></td>
+                </tr>
+            </table>
+            <div class="pop_btn_wrap">
+                <button class="new_reset_btn">Cancel</button>
+                <button class="new_apply_btn">Register</button>
+            </div>
+        </div>
+
+               
+
+        <script>
+        $(function(){
+            // GNB 셀렉트 박스
+            // $( "#selectmenu" ).selectmenu();
+            // $( "#selectmenu2" ).selectmenu();
+            $( "#selectmenu3" ).selectmenu();
+            $( "#selectmenu" ).click(function(){
+                $("#select_wrap").toggle();
+            });
+            $( "#selectmenu2" ).click(function(){
+                $("#select_wrap2").toggle();
+            });
+            $( "#select_property" ).click(function(){
+                $("#select_wrap3").toggle();
+            });
+            $( "#select_condition" ).click(function(){
+                $("#select_wrap4").toggle();
+            });
+            $( "#selectmenu_va" ).click(function(){
+                $("#select_va").toggle();
+            });
+
+        
+
+
+            // GNB 버튼
+            $(".data_type").click(function(){
+            if($(this).hasClass("on")){
+                $(this).siblings().removeClass("on");
+            }else{
+                $(this).addClass("on");
+                $(this).siblings().removeClass("on");
+            }
+            });
+                
+            // 체크박스 전체 선택, 해제
+            $("#check_all").click(function(){
+                if($("#check_all").prop("checked")){
+                    $("input[name=chk]").prop("checked",true);
+                    $(".btn.url").addClass("on");
+                    $(".btn.del").addClass("on");
+                    $(".btn.exp").addClass("on");
+                    $("tr").addClass("hover");
+                    
+                    
+                    
+                }else{
+                    $("input[name=chk]").prop("checked",false);
+                    $(".btn.url").removeClass("on");
+                    $(".btn.del").removeClass("on");
+                    $(".btn.exp").removeClass("on");
+                    $("tr").removeClass("hover");
+                    
+                }
+                
+            });
+
+            // 체크박스 버튼 연동
+            $(".val_chk").click(function(){
+
+            let isChk = $("input:checkbox[name=chk]").is(":checked");
+
+            if (isChk){
+                $(".btn.url").addClass("on");
+                $(".btn.del").addClass("on");
+                $(".btn.exp").addClass("on");
+                $(this).closest('tr').addClass("hover");    
+            }
+            else{
+                $(".btn.del").removeClass("on");
+                $(".btn.exp").removeClass("on"); 
+                $(".btn.url").removeClass("on");
+                $(this).closest('tr').removeClass("hover");    
+            }
+            });
+
+             // add url 팝업
+             $("#add_url").click(function(){
+                $(".popbg").show();
+                $(".add_url_pop").show();
+            });
+            $(".close_pop").click(function(){
+                $(".popbg").fadeOut();
+                $(".add_url_pop").hide();
+                $(".adv_sch_pop").fadeOut();
+                $(".view_wrap_pop").fadeOut();
+                $(".request").fadeOut();
+                $(".schedule").fadeOut();
+            });
+            $(".cancel").click(function(){
+                $(".popbg").fadeOut();
+                $(".add_url_pop").hide();
+                $(".adv_sch_pop").fadeOut();
+                $(".request").fadeOut();
+                $(".schedule").fadeOut();
+            });
+            
+            $(".close_pop_right").click(function(){
+                $(".popbg").fadeOut();
+                $(".add_url_pop").hide();
+                $(".adv_sch_pop").fadeOut();
+                $(".view_wrap_pop").fadeOut();
+                $(".request").fadeOut();
+                $(".schedule").fadeOut();
+            });
+
+            // 팝업닫기
+            $(".popbg").click(function(){
+                $(".adv_sch_pop").fadeOut();
+                $(".view_wrap_pop").fadeOut();
+                $(".popbg").fadeOut();
+                $(".request").fadeOut();
+                $(".schedule").fadeOut();
+            });
+
+            // add request 팝업
+            $(".add_req").click(function(){
+                $(".popbg").fadeIn();
+                $(".request").fadeIn();
+            });
+
+            // batch schedule 팝업
+            $(".btn_view.batch").click(function(){
+                $(".popbg").fadeIn();
+                $(".schedule").fadeIn();
+            });
+
+        });
+            
+        </script>
+
+        <!-- 파일 업로드 캔슬 -->
+        <script type="text/javascript">
+
+            function fileCancel(){
+                var fileTarget = $('#upload');
+                fileTarget.val("");
+                $('.upload-name').val("No file selected.");
+            }
+            
+            var fileTarget = $('#upload');
+            
+            fileTarget.on('change', function(){
+                var filename=$('.upload-name');
+                if(this.files[0] == undefined){
+                    filename.val("No file selected.");
+                    return;
+                }
+                filename.val(this.files[0].name);
+            });
+        </script>
+        <script>
+        // AA/GA 팝업 탭
+        $(function() {
+            $('ul.tab li').click(function() {
+                var activeTab = $(this).attr('data-tab');
+                $('ul.tab li').removeClass('current');
+                $('.tabcontent').removeClass('current');
+                $(this).addClass('current');
+                $('#' + activeTab).addClass('current');
+            })
+        });
+        </script>
+
+        
+        <script>
+            // view 버튼 연동 --임시
+        $(function() {
+         $(".btn_view").click(function(){
+            $(this).toggleClass('on');
+            $('.content_right').toggleClass('on');
+            });
+        });        
+        </script>
+
+
+
+<!-- add rule -->
+<script type="text/javascript">
+//     $(document).ready(function(){
+//         $("#addItemBtn").click(function(){
+//             var lastItemNo = $("#example tr:last").attr("class").replace("item", "");
+//             var newitem = $("#example tr:eq(1)").clone();
+//             newitem.removeClass();
+//             newitem.find("td:eq(0)").attr("rowspan", "1");
+//             newitem.addClass("item"+(parseInt(lastItemNo)+1));
+
+//             $("#example").append(newitem);
+//         });
+//         $(".close_tr").click(function(){
+//             (this).closest().parents().hide();
+//         });
+// });
+
+$('#addItemBtn').click(function() {
+    $('#example > tbody:last').append( //tr마크업 추가
+        '<tr class="item1"><td><input type="text" value="URL" disabled></td><td><input type="text" value="ends with"  disabled></td><td><input class="expand"type="text" value=".com/hk"  disabled></td><td><button class="close_tr"></button></td></tr>');
+  });
+
+  $('.close_tr').click(function() { //tr마크업 삭제
+      alert();
+    $(this).closest('tr').remove();
+  });
+
+  $( function() {
+    $( "#progressbar" ).progressbar({
+      value: 37
+    });
+  } );
+</script>
+
+    </body>
+</html>

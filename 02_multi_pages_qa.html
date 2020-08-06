@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CNXRAY</title>
+        <link rel="stylesheet" type="text/css" href="css/layout.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="css/datatables.css.css">
+        
+        
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/datatables.js"></script>
+    </head>
+    <body>
+        <div class="gnb_wrap">
+            <div class="gnb_wrap_inner">
+                <div class="gnb_content">
+                    <div class="gnb_content_logo">
+                        <img src="./images/new_logo.png">
+                    </div>   
+                    <ul class="gnb_menu_wrap">
+                        <li class="gnb_menu_li ">
+                            <a href="01_one_page_qa.html">One Page QA Mode</a>
+                        </li>
+                        <li class="gnb_menu_li selected">
+                            <a href="02_multi_pages_qa.html">Multi Pages QA Mode</a>
+                        </li>
+                        <li class="gnb_menu_li ">
+                            <a href="03_batch_qa.html">Batch QA Mode</a>
+                        </li>
+                    </ul>
+                    <div class="gnb_user_stat_wrap">
+                        <div class="down_btn_wrap">
+                            <div class="btn_type_01_wrap">
+                                <button class="btn_type_01"><span>AA SDR</span>
+                                    <div class="btn_update_tooltip">Updated:02-Sep-19</div>
+                                </button>
+                                
+                            </div>
+                            <div class="btn_type_02_wrap">
+                                <button class="btn_type_02"><span>GA SDR</span>
+                                    <div class="btn_update_tooltip">Updated:02-Sep-19</div>
+                                </button>
+                                
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="gnb_user_stat">
+                            <div class="gnb_user_img"></div>
+                            <span class="gnb_user_nm">Admin</span>
+                        </div>
+                    </div>
+                    
+                </div>      
+            </div>
+            <div class="gnb_outter_sch">
+                <div class="page_tit">Multi Pages QA Mode</div>
+                <div class="wrap_left">
+                    <div class="url_sch_wrap narr">
+                        <span class="tit2">Template</span>
+                        <div class="url_sch_inner2">
+                            <button class="template_dl_btn">Download</button>
+                            <!-- <div class="tit3">Add Tag Type</div>
+                            <div class="radio_wrap">
+                                <input class="url_radio"type="radio" name="tag_radio" checked>Page
+                                <input class="url_radio"type="radio" name="tag_radio">Page + Event
+                            </div> -->
+                            
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="url_sch_wrap">
+                        <span class="tit2">URL Upload</span>
+                        <div class="url_sch_inner2">
+                            <div class="filebox">
+                                <label for="upload">Choose File</label>
+                                <input class="upload-name" value="No file selected." disabled="disabled">
+                                
+                                <input type="file" id="upload" name="upload" class="upload-hidden">
+                                <a onclick="javascript:fileCancel();"><img src="images/close.png" alt="첨부파일 삭제 버튼"></a>
+                            </div>
+                        </div>
+                        <button class="btn_sch_middle">Register</button>
+                    </div>
+                    
+                                     
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div class="content_wrap">
+            <!-- <div class="content_top_wrap">
+                <button class="btn exp">Export</button>
+            </div> -->
+            <div class="content_inner">
+                
+                    <div class="table_btn_wrap">
+                        <div class="position_left">
+                            <button class="btn run">Run</button>
+                            <button class="btn del2">Delete</button>
+                            <button class="btn exp">Export</button>
+                        </div>
+                        <div class="position_right">
+                            <div class="sch_wrap">
+                                <span class="sch_tit_span">URL</span>
+                                <input type="text" class="sch_url_input"></input>
+                                <button class="sch_url_btn"></button>
+                                <button class="adv_sch_btn">Advanced Search</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <!-- <div class="progress_bar" id="progressbar"></div> -->
+                    <table class="content_list_table detail4">
+                        
+                        <tbody><tr class="">
+                            <th><input type="checkbox" id="check_all"></th>
+                            <th>URL<span class="sorting"></span></th>
+                            <th>Site Code<span class="sorting"></span></th>
+                            <th>Tag Type<span class="sorting"></span></th>
+                            <th>Tag Issue<span class="sorting"></span></th>
+                            <th>Last Updated<span class="sorting"></span></th>
+                            <th>Tag Detail</th>
+                            
+                        </tr>
+                        <tr class="">
+                            <td><input type="checkbox" name="chk" class="val_chk"></td>
+                            <td>
+                                <span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span>
+                                <span><button class="out_link_btn"></button></span>
+                            </td>                            
+                            <td>UK</td>
+                            <td><span class="event">Event</span></td>
+                            <td>
+                                AA<span class="aa issue">(1/1)</span>, GA<span class="ga issue">(15/85)</span>
+                            </td>
+                            <td><span class="last_update">2019.12.30 (13:16:02)</span></td>
+                            <td><button class="btn_view">View</button></td>
+                        </tr>
+                        <tr class="">
+                            <td><input type="checkbox" name="chk" class="val_chk"></td>
+                            <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-</span>
+                                <span><button class="out_link_btn"></button></span>
+                            </td>                            
+                            <td>UK</td>
+                            <td><span class="event">Event</span></td>
+                            <td>
+                                AA<span class="aa issue">(1/1)</span>, GA<span class="ga issue">(15/85)</span>
+                            </td>
+                            <td><span class="last_update">2019.12.30 (13:16:02)</span></td>
+                            <td><button class="btn_view">View</button></td>
+                        </tr>
+                        <tr class="">
+                            <td><input type="checkbox" name="chk" class="val_chk"></td>
+                            <td><span>a.ho-product-3column-group__ct-inner-ataga</span>
+                                <span><button class="out_link_btn"></button></span>
+                            </td>                            
+                            <td>UK</td>
+                            <td><span class="event">Event</span></td>
+                            <td>
+                                AA<span class="aa issue">(1/1)</span>, GA<span class="ga issue">(15/85)</span>
+                            </td>
+                            <td><span class="last_update">2019.12.30 (13:16:02)</span></td>
+                            <td><button class="btn_view">View</button></td>
+                        </tr>
+                        <tr class="">
+                            <td><input type="checkbox" name="chk" class="val_chk"></td>
+                            <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                            <td>UK</td>
+                            <td><span class="event">Event</span></td>
+                            <td>
+                                AA<span class="aa issue">(1/1)</span>, GA<span class="ga issue">(15/85)</span>
+                            </td>
+                            <td><span class="last_update">2019.12.30 (13:16:02)</span></td>
+                            <td><button class="btn_view">View</button></td>
+                        </tr>
+                        <tr class="">
+                            <td><input type="checkbox" name="chk" class="val_chk"></td>
+                            <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                            <td>UK</td>
+                            <td><span class="event">Event</span></td>
+                            <td>
+                                AA<span class="aa issue">(1/1)</span>, GA<span class="ga issue">(15/85)</span>
+                            </td>
+                            <td><span class="last_update">2019.12.30 (13:16:02)</span></td>
+                            <td><button class="btn_view">View</button></td>
+                        </tr>
+                        <tr class="">
+                            <td><input type="checkbox" name="chk" class="val_chk"></td>
+                            <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                            <td>UK</td>
+                            <td><span class="event">Event</span></td>
+                            <td>
+                                AA<span class="aa issue">(1/1)</span>, GA<span class="ga issue">(15/85)</span>
+                            </td>
+                            <td><span class="last_update">2019.12.30 (13:16:02)</span></td>
+                            <td><button class="btn_view">View</button></td>
+                        </tr>
+                        <tr class="">
+                            <td><input type="checkbox" name="chk" class="val_chk"></td>
+                            <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                            <td>UK</td>
+                            <td><span class="event">Event</span></td>
+                            <td>
+                                AA<span class="aa issue">(1/1)</span>, GA<span class="ga issue">(15/85)</span>
+                            </td>
+                            <td><span class="last_update">2019.12.30 (13:16:02)</span></td>
+                            <td><button class="btn_view">View</button></td>
+                        </tr>
+                        <tr class="">
+                            <td><input type="checkbox" name="chk" class="val_chk"></td>
+                            <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                            <td>UK</td>
+                            <td><span class="event">Event</span></td>
+                            <td>
+                                AA<span class="aa issue">(1/1)</span>, GA<span class="ga issue">(15/85)</span>
+                            </td>
+                            <td><span class="last_update">2019.12.30 (13:16:02)</span></td>
+                            <td><button class="btn_view">View</button></td>
+                        </tr>
+                        <tr class="">
+                            <td><input type="checkbox" name="chk" class="val_chk"></td>
+                            <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                            <td>UK</td>
+                            <td><span class="page">Page</span><span class="event">Event</span></td>
+                            <td>
+                                AA<span class="aa issue">(1/1)</span>, GA<span class="ga issue">(15/85)</span>
+                            </td>
+                            <td><span class="last_update">2019.12.30 (13:16:02)</span></td>
+                            <td><button class="btn_view">View</button></td>
+                        </tr>
+                        <tr class="">
+                            <td><input type="checkbox" name="chk" class="val_chk"></td>
+                            <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                            <td>UK</td>
+                            <td><span class="event">Event</span></td>
+                            <td>
+                                AA<span class="aa issue">(1/1)</span>, GA<span class="ga issue">(15/85)</span>
+                            </td>
+                            <td><span class="last_update">2019.12.30 (13:16:02)</span></td>
+                            <td><button class="btn_view">View</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="pag_wrap">
+                    <div class="left">
+                        15<span class="tit">Result</span> 
+                    </div>
+                    <div class="pagination">
+                        
+                        <a href="#">&lt; &nbsp;&nbsp;Prev</a>
+                        <a href="#">1</a>
+                        <a class="active" href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a href="#">Next &nbsp;&nbsp;&gt;</a>
+                        
+                    </div>
+                    <div class="right">
+                        <span class="tit">Items per page</span>
+                        <select id="selectmenu3" style="display: none;">
+                            <option selected="selected">15</option>
+                            <option>test</option>
+                            <option>test</option>
+                            <option>test</option>
+                            <option>test</option>
+                        </select>
+                    </div>
+                </div>
+                
+
+            </div>     
+        </div>
+        
+        <!-- add URL popup-->
+        <div class="popbg"></div>
+        <div class="add_url_pop">
+            <div class="pop_top">
+                <span class="pop_top_tit">Add URL</span>
+                <button class="close_pop"></button>
+            </div>
+            <div class="pop_content">
+                <div class="pop_inner_wrap">
+                    <div class="left">
+                        <span class="section_tit">URL</span>
+                    </div>
+                    <div class="right">
+                        <input class="url_ipt" type="text" value="https://www.samsung.com/sec/smartphones/galaxy-s10/">
+                        <div class="collect_chk_wrap">
+                            <input class="pop_check" type="checkbox" id="pop_check_value">
+                            <label for="pop_check_value">include child pages</label>
+                        </div>
+                        <select>
+                            <option>Select Site Code…</option>
+                            <option>AE_AR,CH,HK,EN,IN</option>
+                            <option>AE_AR,CH,HK,EN,IN</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pop_inner_wrap">
+                    <div class="left">
+                        <span class="section_tit">Upload</span>
+                    </div>
+                    <div class="right">
+                        <div class="filebox">
+                            
+                            <input class="upload-name" value="No file selected." disabled="disabled">
+
+                            <label for="upload">File...</label>
+                            <input type="file" id="upload" name="upload" class="upload-hidden">
+
+                            <a onclick="javascript:fileCancel();"><img src="images/close.png" alt="첨부파일 삭제 버튼"></a>
+                            <button class="down_temp">Template</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pop_button_wrap">
+                <div class="pop_btn_wrap">
+                    <button class="cancel">Cancel</button>
+                    <button class="confirm">OK</button>
+                </div>
+            </div> 
+        </div>
+
+        <!-- Advanced search popup-->
+        <div class="adv_sch_pop" >
+            <div class="pop_top">
+                <button class="close_pop"></button>
+            </div>
+            <div class="pop_content">
+                <div class="pop_content_tit">Advanced Search Filter</div>
+                <div class="adv_sch_pop_cont_wrap">
+                    <div class="left">
+                        <ul class="site_code_wrap">
+                            <li class="first_li" style="height:30px;line-height:30px;">
+                                <div class="tit2">Site Code</div>
+                            </li>
+                            <li class="check_site_wrap_all">
+                            
+                                <button class="btn_code_pop">Select</button>
+                                <div class="select_code_pop" style="display:none;">
+                                    <button class="close_pop_right2"></button>
+                                    <div class="tit2">Site Code</div>
+                                    <div class="check_site_wrap_first">
+                                        <input type="checkbox" name="site_code" checked="checked" id="pop_check_all"> All Sites
+                                    </div>
+                                    <div class="check_site_wrap">
+                                        <ul class="inner_ul_first">
+                                            <input type="checkbox" name="site_code" id="africa"> AFRICA
+                                        </ul>
+                                        <ul class="inner_ul">
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="africa_li"> africa_en
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="africa_li"> africa_fr
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="africa_li"> africa_pt
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="africa_li"> za
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="check_site_wrap ex">
+                                        <ul class="inner_ul_first">
+                                            <input type="checkbox" name="site_code" id="apac"> APAC
+                                        </ul>
+                                        <ul class="inner_ul ex">
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li"> au
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li"> cnt
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li"> hk
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li"> hk_en
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li"> in
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li"> id
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li"> jp
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li"> sec
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li"> my
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li"> mm
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li">nz
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li"> ph
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li">sg
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li">tw
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li"> th
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="apac_li"> vn
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="check_site_wrap">
+                                        <ul class="inner_ul_first">
+                                        <input type="checkbox" name="site_code" id="cis"> CIS
+                                        </ul>
+                                        <ul class="inner_ul">
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="cis_li"> kz_ru
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="cis_li"> kz_kz
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="cis_li"> ru
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="cis_li"> ua
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="check_site_wrap ex2">
+                                        <ul class="inner_ul_first">
+                                        <input type="checkbox" name="site_code" id="europe"> EUROPE
+                                        </ul>
+                                        <ul class="inner_ul ex2">
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> hk_en
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> hu
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> id
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> ie
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> il
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> in
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> iran
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> it
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> jp
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> kz_kz
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> kz_ru
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> latin
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> latin_en
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> levant
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> levant_ar
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> lt
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> lv
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> mk
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> mm
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> mx
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> my
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> n_africa
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> nl
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> no
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> nz
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> pe
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> ph
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> pk
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> pl
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> pt
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> py
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="europe_li"> sec
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="check_site_wrap ex">
+                                        <ul class="inner_ul_first">
+                                        <input type="checkbox" name="site_code" id="la"> LA
+                                        </ul>
+                                        <ul class="inner_ul ex">
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="la_li"> es
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="la_li"> ro
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="la_li"> rs
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="la_li"> ru
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="la_li"> sa
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="la_li"> sa_en
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="la_li"> sg
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="la_li"> si
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="la_li"> sk
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="la_li"> za
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="check_site_wrap ex">
+                                        <ul class="inner_ul_first">
+                                        <input type="checkbox" name="site_code" id="mea"> MEA
+                                        </ul>
+                                        <ul class="inner_ul ex">
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="mea_li"> ae
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="mea_li"> ae_ar
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="mea_li"> ch
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="mea_li"> ch_fr
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="mea_li"> se
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="mea_li"> th
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="mea_li"> tr
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="mea_li"> tw
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="mea_li"> ua
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="mea_li"> uk
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="mea_li"> uy
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="check_site_wrap">
+
+                                        <ul class="inner_ul_first">
+                                        <input type="checkbox" name="site_code" id="na"> NA
+                                        </ul>
+                                        <ul class="inner_ul ex">
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="na_li"> uz_ru
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="na_li"> uz_uz
+                                            </li>
+                                            <li class="inner_li">
+                                                <input type="checkbox" name="site_code" class="na_li"> vn
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="pop_btn_wrap">
+                                        <button class="new_reset_btn">Cancel</button>
+                                        <button class="new_apply_btn">OK</button>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li class="first_li mt10">
+                                <div class="tit2">Tag Type</div>
+                            </li>
+                            <li>
+                                <div class="radio_wrap2 mt10">
+                                    <input type="radio" name="tag_type" checked><span>Page</span> 
+                                    <input type="radio" name="tag_type"><span> Event</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div class="url_sch_wrap">
+
+                                <div class="site_select">
+
+                                    <div class="tit2">Search condition</div>
+                                    <div class="right_left">
+                                    <div class="gnb_align_right">
+                                        <div class="site_code">
+                                            <select id="select_property" class="url_select_wrap">
+                                                <option value="url" >URL</option>
+                                                <option value="ga">GA</option>
+                                                <option value="aa">AA</option>
+                                            </select>
+                                        </div>
+                                        <div class="site_code">
+                                            <select id="select_condition" class="matching_select_wrap">
+                                                <option >exactly matching with</option>
+                                                <option >ends with</option>
+                                                <option >containing</option>
+                                            </select>
+                                        </div>
+                                        <div class="site_code">
+                                            <input type="text" value="https://www.samsung.com/uk/" class="url_input">
+                                        </div>
+                                        
+                                        <div class="add_rule_wrap">
+                                            <table id="example">
+                                                <tbody>
+                                                    <!-- GA -->
+                                                    <tr>
+                                                        <td>
+                                                            <div class="site_code">
+                                                                <select id="select_property" class="url_select_wrap">
+                                                                    <option value="url" >URL</option>
+                                                                    <option value="ga" selected>GA</option>
+                                                                    <option value="aa">AA</option>
+                                                                </select>
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+                                                            <div class="site_code">
+                                                                <div class="url_select_ev_pr">
+                                                                    <span>Select variables</span>
+                                                                    <!-- 2020422 -->
+                                                                    <div class="select_info_tip">Select variables, variables, variables, variables, variables,Select variables, variables, variables, variables, variables,Select variables, variables, variables, variables, variables,Select variables, variables, variables, variables, variables,Select variables, variables, variables, variables, variables,Select variables, variables, variables, variables, variables,Select variables, variables, variables, variables, variables,</div>
+                                                                    <!-- 2020422 -->
+                                                                </div>
+                                                                <div class="url_sch_wrap_cont">
+                                                                    <div class="url_sch_wrap_top">
+                                                                        <input type="text" class="keyword_input" placeholder="Search Keyword">
+                                                                    </div>
+                                                                    <div class="url_sch_result_wrap">
+                                                                        <table >
+                                                                            <tr>
+                                                                                <td class="keyword_check">
+                                                                                    <input type="checkbox">
+                                                                                </td>
+                                                                                <td class="keyword_val">
+                                                                                    current url
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="keyword_check">
+                                                                                    <input type="checkbox">
+                                                                                </td>
+                                                                                <td class="keyword_val">
+                                                                                    marketing cloud organization id (mcorgid)
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="keyword_check">
+                                                                                    <input type="checkbox">
+                                                                                </td>
+                                                                                <td class="keyword_val">
+                                                                                    activity map link
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="keyword_check">
+                                                                                    <input type="checkbox">
+                                                                                </td>
+                                                                                <td class="keyword_val">
+                                                                                    activity map page
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="keyword_check">
+                                                                                    <input type="checkbox">
+                                                                                </td>
+                                                                                <td class="keyword_val">
+                                                                                    activity map region
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="keyword_check">
+                                                                                    <input type="checkbox">
+                                                                                </td>
+                                                                                <td class="keyword_val">
+                                                                                    marketing cloud visitor id (mid)
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="keyword_check">
+                                                                                    <input type="checkbox">
+                                                                                </td>
+                                                                                <td class="keyword_val">
+                                                                                    audience manager blob (aamb)
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="keyword_check">
+                                                                                    <input type="checkbox">
+                                                                                </td>
+                                                                                <td class="keyword_val">
+                                                                                    supplemental id (sdid)
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="keyword_check">
+                                                                                    <input type="checkbox">
+                                                                                </td>
+                                                                                <td class="keyword_val">
+                                                                                    audience manager blob (aamb)
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="keyword_check">
+                                                                                    <input type="checkbox">
+                                                                                </td>
+                                                                                <td class="keyword_val">
+                                                                                    supplemental id (sdid)
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="keyword_check">
+                                                                                    <input type="checkbox">
+                                                                                </td>
+                                                                                <td class="keyword_val">
+                                                                                    audience manager blob (aamb)
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="keyword_check">
+                                                                                    <input type="checkbox">
+                                                                                </td>
+                                                                                <td class="keyword_val">
+                                                                                    supplemental id (sdid)
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+                                                            <div class="site_code">
+                                                                <span class="inner_tit">Filter</span>
+                                                                <input type="checkbox">
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="site_code">
+                                                                <select class="url_select_begin_wrap disabled" disabled>
+                                                                    <option value="begins" disabled>begins with</option>
+                                                                    <option value="test"disabled>test</option>
+                                                                    <option value="test"disabled>test</option>
+                                                                </select>
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+                                                            <div class="site_code">
+                                                                <input type="text" value="" class="option_text_input" disabled>
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+                                                            <td><button class="close_tr"></button></td>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- AA -->
+                                                    <!-- GA -->
+                                                    <tr>
+                                                        <td>
+                                                            <div class="site_code">
+                                                                <select id="select_property" class="url_select_wrap">
+                                                                    <option value="url" >URL</option>
+                                                                    <option value="ga">GA</option>
+                                                                    <option value="aa" selected>AA</option>
+                                                                </select>
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+                                                            <div class="site_code">
+                                                                <div class="url_select_ev_pr">
+                                                                    Select variables
+                                                                </div>
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+                                                            <div class="site_code">
+                                                                <span class="inner_tit">Filter</span>
+                                                                <input type="checkbox" checked>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="site_code">
+                                                                <select class="url_select_begin_wrap">
+                                                                    <option value="begins" >begins with</option>
+                                                                    <option value="test">test</option>
+                                                                    <option value="test">test</option>
+                                                                </select>
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+                                                            <div class="site_code">
+                                                                <input type="text" value="" class="option_text_input">
+                                                            </div> 
+                                                        </td>
+                                                        <td>
+                                                            <td><button class="close_tr"></button></td>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <button class="new_reset_btn">Reset</button>
+                                    <button class="new_apply_btn">Apply</button>
+                                    
+                                    
+                                </div>
+                                <div class="sch_condition_wrap">
+                                    <button class="adv_rule" id="addItemBtn">Add Rule</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content_inner2">
+                
+                    <div class="table_btn_wrap">
+                        <div class="position_left">
+                            <button class="btn exp">Export</button>
+                        </div>
+                    </div>
+
+                    <div class="content_list_table_detail5_wrap">
+                        <table class="content_list_table detail5" style="overflow-x:scroll">
+                            
+                            <tbody><tr class="">
+                                <th><input type="checkbox" id="check_all"></th>
+                                <th>URL<span class="sorting"></span></th>
+                                <th>AA/GA<span class="sorting"></span></th>
+                                <th>Tag Type<span class="sorting"></span></th>
+                                <th>Selector<span class="sorting"></span></th>
+                                <th>CTA<span class="sorting"></span></th>
+                                <th>CTA Image</th>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td>
+                                    <span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span>
+                                    <span><button class="out_link_btn"></button></span>
+                                </td>                            
+                                <td>UK</td>
+                                <td><span class="event">Event</span></td>
+                                <td>
+                                    a.ho-product-3column-group__ct-inner-atag
+                                </td>
+                                <td>Home</td>
+                                <td><button class="cta_img_btn">
+                                    
+                                    <div class="cta_img_wrap">
+                                        <img class="cta_imgs">
+                                    </div>
+                                </button>
+                                    
+                                </td>
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-</span>
+                                    <span><button class="out_link_btn"></button></span>
+                                </td>                            
+                                <td>UK</td>
+                                <td><span class="event">Event</span></td>
+                                <td>
+                                    a.ho-product-3column-group__ct-inner-atag
+                                </td>
+                                <td>Home</td>
+                                <td><button class="cta_img_btn"></button></td>
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span>a.ho-product-3column-group__ct-inner-ataga</span>
+                                    <span><button class="out_link_btn"></button></span>
+                                </td>                            
+                                <td>UK</td>
+                                <td><span class="event">Event</span></td>
+                                <td>
+                                    a.ho-product-3column-group__ct-inner-atag
+                                </td>
+                                <td>Home</td>
+                                <td><button class="cta_img_btn"></button></td>
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                                <td>UK</td>
+                                <td><span class="event">Event</span></td>
+                                <td>
+                                    a.ho-product-3column-group__ct-inner-atag
+                                </td>
+                                <td>Home</td>
+                                <td><button class="cta_img_btn"></button></td>
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                                <td>UK</td>
+                                <td><span class="event">Event</span></td>
+                                <td>
+                                    a.ho-product-3column-group__ct-inner-atag
+                                </td>
+                                <td>Home</td>
+                                <td><button class="cta_img_btn"></button></td>
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                                <td>UK</td>
+                                <td><span class="event">Event</span></td>
+                                <td>
+                                    a.ho-product-3column-group__ct-inner-atag
+                                </td>
+                                <td>Home</td>
+                                <td><button class="cta_img_btn"></button></td>
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                                <td>UK</td>
+                                <td><span class="event">Event</span></td>
+                                <td>
+                                    a.ho-product-3column-group__ct-inner-atag
+                                </td>
+                                <td>Home</td>
+                                <td><button class="cta_img_btn"></button></td>
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                                <td>UK</td>
+                                <td><span class="event">Event</span></td>
+                                <td>
+                                    a.ho-product-3column-group__ct-inner-atag
+                                </td>
+                                <td>Home</td>
+                                <td><button class="cta_img_btn"></button></td>
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                                <td>UK</td>
+                                <td><span class="page">Page</span><span class="event">Event</span></td>
+                                <td>
+                                    a.ho-product-3column-group__ct-inner-atag
+                                </td>
+                                <td>Home</td>
+                                <td><button class="cta_img_btn"></button></td>
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                                <td>UK</td>
+                                <td><span class="event">Event</span></td>
+                                <td>
+                                    a.ho-product-3column-group__ct-inner-atag
+                                </td>
+                                <td>Home</td>
+                                <td><button class="cta_img_btn"></button></td>
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                                <td>UK</td>
+                                <td><span class="event">Event</span></td>
+                                <td>
+                                    a.ho-product-3column-group__ct-inner-atag
+                                </td>
+                                <td>Home</td>
+                                <td><button class="cta_img_btn"></button></td>
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>                            
+                                <td>UK</td>
+                                <td><span class="event">Event</span></td>
+                                <td>
+                                    a.ho-product-3column-group__ct-inner-atag
+                                </td>
+                                <td>Home</td>
+                                <td><button class="cta_img_btn"></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pag_wrap">
+                    <div class="left">
+                        15<span class="tit">Result</span> 
+                    </div>
+                    <div class="pagination">
+                        
+                        <a href="#">&lt; &nbsp;&nbsp;Prev</a>
+                        <a href="#">1</a>
+                        <a class="active" href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a href="#">Next &nbsp;&nbsp;&gt;</a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="view_wrap_pop">
+            <div class="pop_top">
+                <button class="close_pop"></button>
+            </div>
+            <div class="pop_content2">
+                <div class="pop_content_tit">Tag Detail in Multi Page QA Mode</div>
+                <div class="content_inner3">
+                    <div class="content_left2">
+                        <ul class="cnt_ul_wrap">
+                            <li class="cnt_li">
+                                <dl>
+                                    <dd class="dd_tit bar">URL</dd>
+                                    <!-- 20200422 -->
+                                    <dd class="dd_txt">https://www.samsung.com/levant/https://www.samsung.com/levant/https://www.samsung.com/levant/https://www.samsung.com/levant/https://www.samsung.com/levant/https://www.samsung.com/levant/</dd>
+                                    <!-- 20200422 -->
+                                    <dd><button class="out_link_btn"></button></dd>
+                                </dl>
+                            </li>
+                            <li class="cnt_li">
+                                <dl>
+                                    <dd class="dd_tit">Total Tag <span class="dd_value">85</span></dd>
+                                    <dd class="dd_tit">Tag Issue(AA) <span class="dd_value">85</span></dd>
+                                    <dd class="dd_tit">Tag Issue(GA) <span class="dd_value">85</span></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <div class="">
+                            <button class="btn exp">Export</button>
+                        </div>
+                        <table class="content_list_table detail_pop">
+                            
+                            <tbody><tr class="">
+                                <th><input type="checkbox" id="check_all"></th>
+                                <th colspan="2">Tag Issue
+                                    <span class="tag_issue_tit_wrap">
+                                        <span class="tag_issue_tit">AA</span><span class="tag_issue_tit">GA</span>
+                                    </span>
+                                </th>
+                                <th>Tag Type
+                                    <i class="tip">
+                                        <div class="btn_update_tooltip">Lorem ipsum dolor sit amet, consectetur</div>
+                                    </i>
+                                </th>
+                                <th>CTA
+                                     <!--20200422  -->
+                                    <i class="tip">
+                                        <div class="btn_update_tooltip">Link text of title in HTML source</div>
+                                    </i>
+                                    <!--20200422  -->
+                                </th>
+                                <th>Selector
+                                    <!--20200422  -->
+                                    <i class="tip">
+                                        <div class="btn_update_tooltip">Displays HTML Class or ID of the CTA</div>
+                                    </i>
+                                    <!--20200422  -->
+                                </th>
+                                <th>Tag Detail</th>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td><span>a.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-ataga.ho-product-3column-group__ct-inner-atag</span></td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="event">Event</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                            <tr class="">
+                                <td><input type="checkbox" name="chk" class="val_chk"></td>
+                                <td><span class="status_fine"></span></td>
+                                <td><span class="status_warn"></span></td>
+                                <td>
+                                    <span class="page">Page</span>
+                                </td>
+                                <td>Performance</td>
+                                <td>a.ho-product-3column-group__ct-inner-atag</td>
+                                <td><button class="btn_view">View</button></td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <!-- <div class="pag_wrap">
+                        <div class="pagination">
+                            <div class="left">
+                                15<span class="tit">Result</span> 
+                            </div>
+                            <a href="#">&lt; &nbsp;&nbsp;Prev</a>
+                            <a href="#">1</a>
+                            <a class="active" href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                            <a href="#">Next &nbsp;&nbsp;&gt;</a>
+                        </div>
+                    </div>           -->
+                                
+    
+                    </div>
+                    <div class="content_right2">
+                        <div class="content_right_top">
+                            <div class="content_right_tit">Tag Detail</div>
+                            <div class="content_img_wrap">
+                                <!-- img -->
+                            </div>
+                        </div>
+                        <div class="content_right_bottom">
+                            <div class="tag_detail_bottom_wrap">
+                                <div id="container">
+                                    <ul class="tab">
+                                        <li class="current" data-tab="tab1"><a href="#">AA</a></li>
+                                        <li data-tab="tab2" class=""><a href="#">GA</a></li>
+                                    </ul>
+                                    <div id="tab1" class="tabcontent current">
+                                        <table class="content_tab_table">
+                                            <tbody><tr>
+                                                <th>Key</th>
+                                                <th>Value</th>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                        </tbody></table>
+                                    </div>
+                                    <div id="tab2" class="tabcontent">
+                                        <table class="content_tab_table">
+                                            <tbody><tr>
+                                                <th>Key</th>
+                                                <th>Value</th>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>flagship pdp</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>flagship pdp</td>
+                                            </tr>
+                                            <tr>
+                                                <td>pageName</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>pageName</td>
+                                                <td>flagship pdp</td>
+                                            </tr>
+                                            <tr>
+                                                <td>pageName</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>pageName</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>pageName</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mid</td>
+                                                <td>25408705436030703232921119215377939339</td>
+                                            </tr>
+                                        </tbody></table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+
+        <!-- Run popup -->
+        <div class="run_pop_wrap">
+            <div class="radio_wrap">
+                <h3>Please select tag type you want to run QA</h3>
+                <div class="ipnut_wrap">
+                    <input class="url_radio"type="radio" name="tag_radio" checked>Page Tracking Only
+                </div>
+                <div class="ipnut_wrap">
+                    <input class="url_radio"type="radio" name="tag_radio">Page + Event Tracking
+                </div>
+                <button class="btn run close">Run</button>
+            </div>
+            
+
+
+        </div>
+        <!-- //Run popup -->
+        
+        
+
+        <script>
+        $(function(){
+            // GNB 셀렉트 박스
+            
+            $( "#selectmenu3" ).selectmenu();
+            $( "#selectmenu4" ).selectmenu();
+            $( "#selectmenu" ).click(function(){
+                $("#select_wrap").toggle();
+            });
+            $( "#selectmenu2" ).click(function(){
+                $("#select_wrap2").toggle();
+            });
+            $( "#select_property" ).click(function(){
+                $("#select_wrap3").toggle();
+            });
+            $( "#select_condition" ).click(function(){
+                $("#select_wrap4").toggle();
+            });
+            $( "#selectmenu_va" ).click(function(){
+                $("#select_va").toggle();
+            });
+
+                    
+            $('#select_property').change(function() {
+                var state = jQuery('#select_property option:selected').val();
+                if ( state == 'url' ) {
+                    jQuery('.url').show();
+                    jQuery('.ga').hide();
+                    jQuery('.aa').hide();
+                } else if (state == 'ga'){
+                    jQuery('.url').hide();
+                    jQuery('.ga').show();
+                    jQuery('.aa').hide();
+                } else {
+                    jQuery('.url').hide();
+                    jQuery('.ga').hide();
+                    jQuery('.aa').show();
+                }
+            });
+
+            $('#addItemBtn').click(function() {
+                $('#example > tbody:last').append( //tr마크업 추가
+                    '<tr class="item1"><td><div class="site_code"><select id="select_property" class="url_select_wrap"><option >URL</option><option >GA</option><option >AA</option></select></div></td><td><div class="site_code"><select id="select_condition" class="matching_select_wrap"><option>exactly matching with</option><option>ends with</option><option>containing</option></select></div></td><td><div class="site_code"><input type="text" value="" class="url_input"></div></td><td><button class="close_tr"></button></td></tr>');
+            });
+
+
+            $('.close_tr').click(function(){ //tr마크업 삭제
+                
+                $('#example > tbody:last > tr').remove();
+                
+            });
+
+            // GNB 버튼
+            $(".data_type").click(function(){
+            if($(this).hasClass("on")){
+                $(this).siblings().removeClass("on");
+            }else{
+                $(this).addClass("on");
+                $(this).siblings().removeClass("on");
+            }
+            });
+                
+            // 체크박스 전체 선택, 해제
+            $("#check_all").click(function(){
+                if($("#check_all").prop("checked")){
+                    $("input[name=chk]").prop("checked",true);
+                    $(".btn.url").addClass("on");
+                    $(".btn.del2").addClass("on");
+                    $(".btn.exp").addClass("on");
+                    $("tr").addClass("hover");
+                    $('.btn.run').addClass("on");
+                    
+                }else{
+                    $("input[name=chk]").prop("checked",false);
+                    $(".btn.url").removeClass("on");
+                    $(".btn.del2").removeClass("on");
+                    $(".btn.exp").removeClass("on");
+                    $("tr").removeClass("hover");
+                    $('.btn.run').removeClass("on");
+                    
+                }
+                
+            });
+
+            // ADV SCH POP 체크박스 전체 선택, 해제
+            $("#pop_check_all").click(function(){
+                if($("#pop_check_all").prop("checked")){
+                    $("input[name=site_code]").prop("checked",true);
+                }else{
+                    $("input[name=site_code]").prop("checked",false);
+                }
+            });
+
+            $("#africa").click(function(){
+                if($("#africa").prop("checked")){
+                    $(".africa_li").prop("checked",true);
+                }else{
+                    $(".africa_li").prop("checked",false);
+                    $("#pop_check_all").prop("checked",false);
+                }
+            });
+
+            $("#apac").click(function(){
+                if($("#apac").prop("checked")){
+                    $(".apac_li").prop("checked",true);
+                }else{
+                    $(".apac_li").prop("checked",false);
+                    $("#pop_check_all").prop("checked",false);
+                }
+            });
+
+            $("#cis").click(function(){
+                if($("#cis").prop("checked")){
+                    $(".cis_li").prop("checked",true);
+                }else{
+                    $(".cis_li").prop("checked",false);
+                    $("#pop_check_all").prop("checked",false);
+                }
+            });
+
+            $("#europe").click(function(){
+                if($("#europe").prop("checked")){
+                    $(".europe_li").prop("checked",true);
+                }else{
+                    $(".europe_li").prop("checked",false);
+                    $("#pop_check_all").prop("checked",false);
+                }
+            });
+            $("#la").click(function(){
+                if($("#la").prop("checked")){
+                    $(".la_li").prop("checked",true);
+                }else{
+                    $(".la_li").prop("checked",false);
+                    $("#pop_check_all").prop("checked",false);
+                }
+            });
+            $("#mea").click(function(){
+                if($("#mea").prop("checked")){
+                    $(".mea_li").prop("checked",true);
+                }else{
+                    $(".mea_li").prop("checked",false);
+                    $("#pop_check_all").prop("checked",false);
+                }
+            });
+            $("#na").click(function(){
+                if($("#na").prop("checked")){
+                    $(".na_li").prop("checked",true);
+                }else{
+                    $(".na_li").prop("checked",false);
+                    $("#pop_check_all").prop("checked",false);
+                }
+            });
+
+
+
+            // 체크박스 버튼 연동
+            $(".val_chk").click(function(){
+
+            let isChk = $("input:checkbox[name=chk]").is(":checked");
+
+            if (isChk){
+                $(".btn.url").addClass("on");
+                $(".btn.del2").addClass("on");
+                $(".btn.exp").addClass("on");
+                $('.btn.run').addClass("on");
+                $(this).closest('tr').addClass("hover");    
+            }
+            else{
+                $(".btn.del2").removeClass("on");
+                $(".btn.exp").removeClass("on"); 
+                $(".btn.url").removeClass("on");
+                $(".btn.run").removeClass("on");
+                $(this).closest('tr').removeClass("hover");    
+            }
+            });
+
+            // add url 팝업
+            $("#add_url").click(function(){
+                $(".popbg").show();
+                $(".add_url_pop").show();
+            });
+            $(".close_pop").click(function(){
+                $(".popbg").fadeOut();
+                $(".add_url_pop").hide();
+                $(".adv_sch_pop").fadeOut();
+                $(".view_wrap_pop").fadeOut();
+                $(".select_code_pop").fadeOut();
+            });
+            $(".cancel").click(function(){
+                $(".popbg").fadeOut();
+                $(".add_url_pop").hide();
+                $(".adv_sch_pop").fadeOut();
+            });
+            
+            // advanced search 팝업
+            $(".adv_sch_btn").click(function(){
+                $(".popbg").fadeIn();
+                $(".adv_sch_pop").fadeIn();
+            });
+
+            // view 팝업
+            // $(".btn_view").click(function(){
+            //     $(".popbg").fadeIn();
+            //     $(".run_pop_wrap").fadeIn();
+            // });
+
+            // RUN 팝업
+            $(".btn.run").click(function(){
+                $(".popbg").fadeIn();
+                $(".run_pop_wrap").fadeIn();
+            });
+            
+            // 팝업닫기
+            $(".popbg").click(function(){
+                $(".adv_sch_pop").fadeOut();
+                $(".view_wrap_pop").fadeOut();
+                $(".popbg").fadeOut();
+                $(".select_code_pop").fadeOut();
+                $(".run_pop_wrap").fadeOut();
+            });
+
+            $(".close_pop_right2").click(function(){
+                $(".select_code_pop").fadeOut();
+            });
+            $(".new_reset_btn").click(function(){
+                $(".select_code_pop").fadeOut();
+            });
+            $(".new_apply_btn").click(function(){
+                $(".select_code_pop").fadeOut();
+            });
+            // Run 팝업 닫기
+            $(".btn.run.close").click(function(){
+                $(".run_pop_wrap").fadeOut();
+                $(".popbg").fadeOut();
+            });
+
+            $(".btn_code_pop").click(function(){
+                $(".select_code_pop").fadeIn();
+            });
+        });
+            
+        </script>
+
+        <!-- 파일 업로드 캔슬 -->
+        <script type="text/javascript">
+
+            function fileCancel(){
+                var fileTarget = $('#upload');
+                fileTarget.val("");
+                $('.upload-name').val("No file selected.");
+            }
+            
+            var fileTarget = $('#upload');
+            
+            fileTarget.on('change', function(){
+                var filename=$('.upload-name');
+                if(this.files[0] == undefined){
+                    filename.val("No file selected.");
+                    return;
+                }
+                filename.val(this.files[0].name);
+            });
+        </script>
+        <script>
+        // AA/GA 팝업 탭
+        $(function() {
+            $('ul.tab li').click(function() {
+                var activeTab = $(this).attr('data-tab');
+                $('ul.tab li').removeClass('current');
+                $('.tabcontent').removeClass('current');
+                $(this).addClass('current');
+                $('#' + activeTab).addClass('current');
+            })
+        });
+        </script>
+
+        
+        <script>
+            // view 버튼 연동 --임시
+        $(function() {
+         $(".btn_view").click(function(){
+            // $(this).toggleClass('on');
+            $('.popbg').fadeIn();
+            $('.view_wrap_pop').fadeIn();
+            });
+        });        
+        </script>
+
+            
+        <script>
+        // 서치컨디션 조건 관련
+        
+        $(function(){
+            $(".url_select_ev_pr").click(function(){
+                $(".url_sch_wrap_cont").show();
+            });
+        });
+
+        // 영역 외 클릭시 테이블 닫기
+        $(document).mouseup(function (e){
+
+        var container = $('.url_sch_wrap_cont');
+        
+            if( container.has(e.target).length === 0){
+            container.css('display','none');
+            }
+
+        });
+        </script>
+    
+    <script>
+    
+    </script>
+
+
+
+<!-- add rule -->
+<script type="text/javascript">
+//     $(document).ready(function(){
+//         $("#addItemBtn").click(function(){
+//             var lastItemNo = $("#example tr:last").attr("class").replace("item", "");
+//             var newitem = $("#example tr:eq(1)").clone();
+//             newitem.removeClass();
+//             newitem.find("td:eq(0)").attr("rowspan", "1");
+//             newitem.addClass("item"+(parseInt(lastItemNo)+1));
+
+//             $("#example").append(newitem);
+//         });
+//         $(".close_tr").click(function(){
+//             (this).closest().parents().hide();
+//         });
+// });
+
+
+  
+
+  $( function() {
+    $( "#progressbar" ).progressbar({
+      value: 37
+    });
+  } );
+  $( function() {
+    $( "#progressbar2" ).progressbar({
+      value: 64
+    });
+  } );
+  
+  $('.sorting').click(function() {
+     $(this).toggleClass('on');
+  });
+  
+</script>
+
+    </body>
+</html>
